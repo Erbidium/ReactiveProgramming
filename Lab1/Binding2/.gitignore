@@ -256,12 +256,3 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,node
 Lab1/.idea/
-
-Lab1/heloapp/.angular/
-Lab1/purchaseapp/.angular/
-
-
-
-Lab1/Binding1/.angular/
-
-Lab1/Binding2/.angular/
