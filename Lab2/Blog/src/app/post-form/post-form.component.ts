@@ -11,10 +11,6 @@ export class PostFormComponent {
   title='';
   text='';
 
-  constructor() { }
-  ngOnInit(): void {
-  }
-
   addPost(){
     if (this.title.trim() && this.text.trim()){
       const post: Post={

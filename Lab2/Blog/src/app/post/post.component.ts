@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, Output} from '@angular/core';
 import { Post } from '../app.component';
 
 @Component({
@@ -6,16 +6,12 @@ import { Post } from '../app.component';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.sass']
 })
-export class PostComponent implements OnInit, OnDestroy {
+export class PostComponent implements OnDestroy {
   @Input('toPost') myPost!:Post;
   @Output() onRemove=new EventEmitter<number>();
-  constructor() { }
 
   removePost(){
     this.onRemove.emit(this.myPost.id)
-  }
-
-  ngOnInit(): void {
   }
 
   ngOnDestroy(){
