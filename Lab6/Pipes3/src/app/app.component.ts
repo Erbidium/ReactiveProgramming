@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { HttpService} from './http.service';
 import {Observable} from 'rxjs';
+import {IUser} from "./user.model";
 
 @Component({
   selector: 'my-app',
@@ -13,8 +14,7 @@ import {Observable} from 'rxjs';
   providers: [HttpService]
 })
 export class AppComponent implements OnInit {
-
-  users: Observable<Object>|undefined;
+  users: Observable<IUser[]>|undefined;
   constructor(private httpService: HttpService){}
   ngOnInit(){
 
