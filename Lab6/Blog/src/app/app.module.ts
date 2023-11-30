@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { PostComponent } from './post/post.component';
+import {SearchPipe} from "./search.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     PostFormComponent,
-    PostComponent
+    PostComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

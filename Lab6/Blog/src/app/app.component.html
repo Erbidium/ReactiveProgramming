@@ -4,8 +4,9 @@
     (onAdd)="updatePosts($event)"
   ></app-post-form>
   <hr/>
+  <input type="text" [(ngModel)]="search" placeholder="Search...">
   <app-post
-    *ngFor="let p of posts"
+    *ngFor="let p of posts | search:search"
     [toPost]="p"
     (onRemove)="deletePost($event)"
   >

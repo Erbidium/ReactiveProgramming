@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 export interface Post {
   title:string;
   text:string;
-  id?:number;
+  id:number;
+  date: Date;
 }
 
 @Component({
@@ -14,9 +15,11 @@ export interface Post {
 export class AppComponent {
   title = 'Blog';
   posts: Post[]=[
-    {title:'Вивчаю компоненти', text:'Створюю проект "Блог"', id:1},
-    {title:'Вивчаю директиви', text:'Все ще створюю "Блог"', id:2}
+    {title:'Вивчаю компоненти', text:'Створюю проект "Блог"', id:1, date: new Date()},
+    {title:'Вивчаю директиви', text:'Все ще створюю "Блог"', id:2, date: new Date()}
   ];
+
+  search = '';
 
   updatePosts(post:Post){
     this.posts.unshift(post);
