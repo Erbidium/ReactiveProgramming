@@ -14,6 +14,7 @@ export class PostFormComponent {
   addPost(){
     if (this.title.trim() && this.text.trim()){
       const post: Post={
+        id: Date.now(),
         title: this.title,
         text: this.text
       }
